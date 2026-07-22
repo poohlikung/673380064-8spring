@@ -1,9 +1,6 @@
 package com.example.demo;
 
-import com.example.coffee.model.Coffee;
-import com.example.coffee.service.CoffeeService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -32,23 +29,18 @@ public class CoffeeController {
     }
 
     @PutMapping("/{id}")
-    public Coffee updateCoffee(
-            @PathVariable Long id,
-            @RequestBody Coffee coffee) {
-
+    public Coffee updateCoffee(@PathVariable Long id,
+                               @RequestBody Coffee coffee) {
         return coffeeService.update(id, coffee);
     }
 
     @DeleteMapping("/{id}")
     public String deleteCoffee(@PathVariable Long id) {
 
-        boolean deleted = coffeeService.delete(id);
-
-        if (deleted) {
+        if (coffeeService.delete(id)) {
             return "Deleted Successfully";
         }
 
         return "Coffee not found";
     }
-
 }

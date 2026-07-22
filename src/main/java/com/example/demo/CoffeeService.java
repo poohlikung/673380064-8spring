@@ -1,7 +1,7 @@
 package com.example.demo;
-
-import com.example.coffee.model.Coffee;
+import com.example.demo.Coffee;
 import org.springframework.stereotype.Service;
+
 
 import java.util.ArrayList;
 import java.util.List;
