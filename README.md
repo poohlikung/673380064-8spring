@@ -14,18 +14,18 @@ GET http://localhost:8080/coffees
   { "id": 2, "name": "Latte",    "price": 55.0 }
 ]
 ## 2. GET ตาม id
-GET /coffees/1   
+GET http://localhost:8080/coffees/1   
 ###### ผลลัพธ์
 { "id": 1, "name": "Espresso", "price": 45.0 }
 
 ## 3. POST เพิ่มเมนูใหม่
-POST /coffees
+POST http://localhost:8080/coffees
 ###### ตัวอย่างข้อมูลที่ใส่เข้าไป
 Body (JSON):
 { "name": "Cappuccino", "price": 60.0 }
 
 ## 4. PUT แก้ไข
-PUT /coffees/2
+PUT http://localhost:8080/coffees/2
 ###### ตัวอย่างข้อมูลที่ใส่เข้าไป
 Body (JSON):
 { "name": "Latte", "price": 50.0 }
@@ -33,7 +33,7 @@ Body (JSON):
 { "id": 2, "name": "Latte", "price": 50.0 }    ราคาเปลี่ยนแล้ว
 
 ## 5. DELETE ลบ
-DELETE /coffees/3
+DELETE http://localhost:8080/coffees/3
 ###### ผลลัพธ์
 "Deleted Successfully"
 
